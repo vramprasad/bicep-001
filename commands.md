@@ -10,3 +10,4 @@ az deployment group what-if —resource-group rp0041-rg —template-file appserv
 az account set —subscription <subscription_id>
 
 az bicep decompile --file main.json
+ 

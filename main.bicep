@@ -1,11 +1,17 @@
 param location string = resourceGroup().location
+param pstgaccName string = 'rp041-stg-001'
+param pstgSKU string = 'Standard_LRS'
+param pstgKind string = 'StorageV2'
 
-module stgDeply 'storage.bicep' = {
-  name: 'stgDeploy'
+param deployStorageAccount bool = false
+
+
+module StorageAccount 'modules/storageaccount/deploy.bicep' = if (deployStorageAccount) {
+  name: 'StorageAccount'
   params: {
-    namePrefix: 'rp041'
-    location: location
-  }
+    plocation: location
+    pstgKind: pstgKind
+    pstgSKU: pstgSKU
+    pstgaccName: pstgaccName
+  }  
 }
-
-output blobUri string = stgDeply.outputs.blobUri

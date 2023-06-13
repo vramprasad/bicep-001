@@ -1,5 +1,5 @@
 param pstgaccName string
-param plocation string
+param plocation string = resourceGroup().location
 param pstgSKU string
 param pstgKind string
 
@@ -10,4 +10,5 @@ resource storageaccount 'Microsoft.Storage/storageAccounts@2021-02-01'= {
     name: pstgSKU
   }
   kind: pstgKind
+  
 }

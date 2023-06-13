@@ -11,6 +11,10 @@ az deployment group what-if —resource-group rp0041-rg —template-file main.bi
 
 az account set —subscription <subscription_id>
 
+az deployment group what-if --resource-group rp0041-rg --template-file .\modules\storageaccount\deploy.bicep --parameters .\parameters\dev.parameters.json    
+
+az deployment group what-if --resource-group rp0041-rg --template-file .\modules\appservice\deploy.bicep --parameters .\parameters\dev.parameters.json  
+
 az deployment group what-if \
   --name TestingDeployment \
   --resource-group rp0041-rg \

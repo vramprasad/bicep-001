@@ -1,9 +1,10 @@
-param pAppServicePlan string = 'doc-app-01-d-asp'
-param pLocation string = 'southindia'
-param pASPSKU string = 'F1'
-param pASPKind string = 'linux'
-param pAppService string = 'doc-app-01-d-as'
-param pLinuxFXVersion string = 'node|14-lts'
+param pAppServicePlan string 
+param pLocation string = resourceGroup().location
+param pASPSKU string
+param pASPKind string
+param pAppService string
+param pLinuxFXVersion string
+
 
 resource AppServicePlan 'Microsoft.Web/serverfarms@2021-02-01' = {
   name: pAppServicePlan

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    
+    "pAppInsightsName": {
+      "value": "docapp-01-d-ai"
+    },
+    "pKind": {
+      "value": "web"
+    },
+    "pstgaccName": {
+      "value": "docapp-01-d-sa"
+    },
+    "pstgSKU": {
+      "value": "Standard_LRS"
+    },
+    "pstgKind": {
+      "value": "StorageV2"
+    },
+    "pAppServicePlan": {
+      "value": "docapp-01-d-asp"
+    },
+    "pASPSKU": {
+      "value": "F1"
+    },
+    "pASPKind": {
+      "value": "linux"
+    },
+    "pAppService": {
+      "value": "docapp-01-d-as"
+    },
+    "pLinuxFXVersion": {
+      "value": "node|14-lts"
+    }
+  }
+}

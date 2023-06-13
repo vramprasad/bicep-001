@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "pstgaccName": {
+      "value": "rp041-stg-t-001"
+    },
+    "pstgSKU": {
+      "value": "Standard_LRS"
+    },
+    "pstgKind": {
+      "value": "StorageV2"
+    },
+    "pAppServicePlan": {
+      "value": "doc-app-01-dt-asp"
+    },
+    "pASPSKU": {
+      "value": "F1"
+    },
+    "pASPKind": {
+      "value": "linux"
+    },
+    "pAppService": {
+      "value": "doc-app-01-t-as"
+    },
+    "pLinuxFXVersion": {
+      "value": "node|14-lts"
+    }
+  }
+}
